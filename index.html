@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+
+    <title>Filmothèque</title>
+</head>
+<body>
+
+    <header class="header" id="header">
+        <h1 class="title" id="title">Filmothèque</h1>
+    </header>
+
+    <section class="nav">
+        <div class="divButton">
+            <input type="button" class="parametre" id="parametre">
+            <input type="button" class="filter_button" id="filter_button">
+        </div>
+
+        <div class="search_barDiv">
+            <input type="text" class="search_bar" id="search_bar">
+        </div>
+        
+
+        <h1 class="resultSearch" id="resultSearch">lol</h1>
+    </section>
+
+    <!-- filter container-->
+    <section class="filterSection" id="filterSection"></section>
+
+    <!-- page card -->
+    <section class="main_container" id="main_container">
+        <div class="arrow LEFT" id="left"></div>
+        <div class="arrow RIGHT" id="right"></div>
+        <div class="container" id="container"></div>
+        <div class="footer_content" id="footer_content">
+            <select name="" id="select" class="select">
+                <option value="10">max 10</option>
+                <option value="20">max 20</option>
+                <option value="100">max 100</option>
+            </select>
+            <div class="pages" id="pages"></div>
+        </div>
+    </section>
+
+    <!-- panel category -->
+    <section class="panel_background" id="panel_background">
+        <div class="panel">
+            <div class="containerH">
+                <img src="" alt="" id="cover" class="cover">
+                <h1 class="titreFilm" id="titreFilm">aaa</h1>
+            </div>
+            <div class="containerH cont">
+                <div class="containerV centered">
+                    <h1 class="autheur" id="autheur">a</h1>
+                    <h3 class="description" id="description"></h3>
+                    <h3 class="categorie" id="categorie">a</h3>
+                </div>
+                <embed src="" type="" id="video" class="video">
+            </div>
+        </div>
+
+        <img src="./images/cross.png" alt="" class="cross" id="crossPanel">
+        
+    </section>
+
+
+    <!-- panel film -->
+    <section class="panel_background" id="panel_background_FilmEdit">
+        <div class="panel">
+            <div class="containerV">
+                <form action="" class="formulaire containerV" id="formulaire">
+                    <input type="text" id="name" name="name" required maxLength="120" placeholder="name">
+                    <input type="text" id="idFilm" name="idFilm" maxLength="120" placeholder="id" >
+                    <input type="text" id="description_input" name="description" required maxLength="120" placeholder="description">
+                    <input type="text" id="author" name="author" required maxLength="120" placeholder="author">
+                    <input type="text" id="imageURL" name="imageURL" required pattern="https://.*" placeholder="image URL">
+                    <input type="text" id="Trailer" name="Trailer" required pattern="https://.*" placeholder="Video URL">
+                    <select name="select" id="select_cate"  required></select>
+                    <input type="submit" value="Ajouter Le Film" id="submitForm">
+                </form>
+            </div>
+        </div>
+        <img src="./images/cross.png" alt="" class="cross" id="crossEdit">
+    </section>
+
+    <!-- panel Add cate -->
+    <section class="panel_background" id="panel_background_AddCate">
+        <div class="panel">
+            <div class="containerV">
+                <form action="" class="formulaire containerV" id="formulaire">
+                    <input type="text" id="name" name="name" class="nameCate" required maxLength="120" placeholder="name">
+                    <input type="submit" value="Ajouter La Categore" id="submitForm" class="submitCate">
+                </form>
+            </div>
+        </div>
+        <img src="./images/cross.png" alt="" class="cross" id="crossCate">
+    </section>
+
+    <!-- panel parametre -->
+    <section class="Panel_Parameter" id="Panel_Parameter">
+            <input type="button" class="addButton" id="addButton" value="Ajouter un Film">
+            <input type="button" class="addCate_button" id="addCate_button" value="Ajouter une Categorie">
+            <input type="button" class="ModifCate_button" id="ModifCate_button" value="Modifier une Categorie">
+            <input type="button" class="SuprCate_button" id="SuprCate_button" value="Suprimer une Categorie">
+            <div class="">
+                <label for="ChangePegiMode">Pegi 18</label>
+                <div class="switch">
+                    <label for="ChangePegiMode" class="switch-label"></label>
+                    <input type="checkbox" class="ChangePegiMode" id="ChangePegiMode" name="ChangePegiMode">
+                </div>
+                
+            </div>
+            <div class="">
+                <label for="ChangeOnlineMode">Online Mode</label>
+                <input type="checkbox" class="ChangeOnlineMode" id="ChangeOnlineMode" name="ChangeOnlineMode">
+            </div>
+            <img src="./images/cross.png" alt="" class="cross" id="crossParameter">
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
