@@ -473,7 +473,7 @@ width: 50%;
     height: 50px;
     width: 50px;
 
-    background-image: url("/images/dislike.png");
+    background-image: url("./images/dislike.png");
     background-position: center;
     background-size: contain;
 
